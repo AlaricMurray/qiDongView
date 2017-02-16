@@ -15,6 +15,7 @@
 		05EB36751E55357E00E08693 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05EB36731E55357E00E08693 /* LaunchScreen.storyboard */; };
 		05EB36801E55357E00E08693 /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EB367F1E55357E00E08693 /* ___Tests.m */; };
 		05EB368B1E55357E00E08693 /* ___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EB368A1E55357E00E08693 /* ___UITests.m */; };
+		05EB369A1E55391300E08693 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05EB36991E55391300E08693 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		05EB36861E55357E00E08693 /* 启动图UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "启动图UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EB368A1E55357E00E08693 /* ___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___UITests.m"; sourceTree = "<group>"; };
 		05EB368C1E55357E00E08693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05EB36981E55391300E08693 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		05EB36991E55391300E08693 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 			children = (
 				05EB36681E55357E00E08693 /* AppDelegate.h */,
 				05EB36691E55357E00E08693 /* AppDelegate.m */,
+				05EB36981E55391300E08693 /* RootViewController.h */,
+				05EB36991E55391300E08693 /* RootViewController.m */,
 				05EB366B1E55357E00E08693 /* ViewController.h */,
 				05EB366C1E55357E00E08693 /* ViewController.m */,
 				05EB366E1E55357E00E08693 /* Main.storyboard */,
@@ -272,6 +277,7 @@
 			files = (
 				05EB366D1E55357E00E08693 /* ViewController.m in Sources */,
 				05EB366A1E55357E00E08693 /* AppDelegate.m in Sources */,
+				05EB369A1E55391300E08693 /* RootViewController.m in Sources */,
 				05EB36671E55357E00E08693 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

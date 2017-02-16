@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RootViewController.h"
 @interface AppDelegate ()
+
+@property (nonatomic , strong)UIImageView * imageView;
+@property (nonatomic , assign)NSInteger i;
+@property (nonatomic , strong)UILabel * label;
+@property (nonatomic , strong)NSTimer * timer;
 
 @end
 
@@ -17,7 +22,60 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+//    [self setWindowRootVC];
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [[RootViewController alloc] init];
+    [self.window makeKeyAndVisible];
+    application.statusBarHidden = NO;
+    
+
+    _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    _imageView.image = [UIImage imageNamed:@"op"];
+    
+    [self.window addSubview:_imageView];
+    
+    _i = 3;
+    _label = [[UILabel alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-60, 50, 40, 30)];
+    _label.text = @"3 s";
+    _label.textAlignment = NSTextAlignmentCenter;
+    _label.font = [UIFont systemFontOfSize:24];
+    _label.textColor = [UIColor whiteColor];
+    _label.backgroundColor = [UIColor clearColor];
+    [_imageView addSubview:_label];
+    
+    
+    
+    [self.window bringSubviewToFront:_imageView];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(removeLun) userInfo:nil repeats:YES];
+    
     return YES;
+    
+
+}
+//
+//- (void)setWindowRootVC
+//{
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window.rootViewController = [[RootViewController alloc] init];
+//    [self.window makeKeyAndVisible];
+//}
+
+
+-(void)removeLun{
+    
+    _i--;
+    _label.text = [NSString stringWithFormat:@"%li s",(long)_i];
+    if (_i == 0) {
+        [_label removeFromSuperview];
+        [_imageView removeFromSuperview];
+        [_timer invalidate];
+        return;
+    }
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
